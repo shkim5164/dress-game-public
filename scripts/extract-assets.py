@@ -32,7 +32,8 @@ def extract(id,name,bounds):
   r=d['rect']
   if not r.intersects(crop) or r.get_area()>crop.get_area()*2:continue
   fill=d.get('fill')
-  if name.endswith('body') and r.y0>390 and r.height<20 and r.width>50:continue
+  if name in ('girl-body-dressed',) and fill and min(fill)>.99 and 210<r.y0<220 and 35<r.width<40:continue
+  if ('body' in name) and r.y0>390 and r.height<20 and r.width>50:continue
   # White rectangular paper folding tabs, including rotated shoulder tabs.
   if fill and min(fill)>.82 and max(fill)-min(fill)<.025 and all(it[0] in ('l','re') for it in d['items']) and len(d['items'])<=5 and r.get_area()<100 and (r.width<8 or r.height<8):continue
   attrs=f'fill="{color(fill) if fill else "none"}" fill-rule="'+('evenodd' if d.get('even_odd') else 'nonzero')+'"'
@@ -45,10 +46,15 @@ def extract(id,name,bounds):
  return dict(file=f'{name}.svg',source=id,bounds=list(bounds))
 # Bounds use PDF points, matching the original sheets.
 specs=[
+('42247','boy-shoe-left',(94.5,389.5,106.7,408)),
+('42247','boy-shoe-right',(114,389.5,126.2,408)),
+('42244','girl-shoe-left',(45.8,392,56.3,406)),
+('42244','girl-shoe-right',(58,392,68.5,406)),
 ('42247','boy-shoes',(87,389,130,409)),
 ('42244','girl-shoes',(43,391,73,407)),
 ('42247','boy-body',(190,128,261,399)),
 ('42244','girl-body',(194,142,256,398)),
+('42244','girl-body-dressed',(194,142,256,398)),
 ('42247','boy-long',(274,124,342,213)),
 ('42234','boy-tank',(225,302,283,405)),
 ('42247','boy-pants',(120,252,169,375)),

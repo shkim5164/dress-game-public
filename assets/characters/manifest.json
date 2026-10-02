@@ -1,5 +1,45 @@
 [
   {
+    "file": "boy-shoe-left.svg",
+    "source": "42247",
+    "bounds": [
+      94.5,
+      389.5,
+      106.7,
+      408
+    ]
+  },
+  {
+    "file": "boy-shoe-right.svg",
+    "source": "42247",
+    "bounds": [
+      114,
+      389.5,
+      126.2,
+      408
+    ]
+  },
+  {
+    "file": "girl-shoe-left.svg",
+    "source": "42244",
+    "bounds": [
+      45.8,
+      392,
+      56.3,
+      406
+    ]
+  },
+  {
+    "file": "girl-shoe-right.svg",
+    "source": "42244",
+    "bounds": [
+      58,
+      392,
+      68.5,
+      406
+    ]
+  },
+  {
     "file": "boy-shoes.svg",
     "source": "42247",
     "bounds": [
@@ -31,6 +71,16 @@
   },
   {
     "file": "girl-body.svg",
+    "source": "42244",
+    "bounds": [
+      194,
+      142,
+      256,
+      398
+    ]
+  },
+  {
+    "file": "girl-body-dressed.svg",
     "source": "42244",
     "bounds": [
       194,

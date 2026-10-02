@@ -1,5 +1,5 @@
 import {categories, items, equip, score, isComplete} from './game.js';
-import {clothingSVG, avatarSVG, portraitSVG} from './art.js';
+import {clothingSVG, avatarSVG, portraitSVG} from './art.js?v=shoulders-20261002';
 const $=selector=>document.querySelector(selector);
 const soundIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4 5 9H2v6h3l6 5ZM15 8q4 4 0 8m3-11q7 7 0 14"/></svg>';
 const mutedIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4 5 9H2v6h3l6 5ZM16 9l6 6m0-6-6 6"/></svg>';
