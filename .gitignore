@@ -1,0 +1,5 @@
+.venv/
+.asset-work/
+assets/source/
+.DS_Store
+.hallmark

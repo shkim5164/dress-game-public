@@ -1,0 +1,12 @@
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R5 V4 */
+:root {
+ --color-paper:#f6f4ec; --color-surface:#fffef9; --color-ink:#303e30; --color-muted:#68715f;
+ --color-accent:#48613b; --color-accent-soft:#e6ecd9; --color-line:#dce0d0; --color-stage:#eef0de;
+ --color-orange:#bb572e; --color-orange-soft:#f6e6d5; --color-white:#ffffff; --color-shadow:#35412412;
+ --color-skin:#eab58f; --color-skin-light:#f1c6a5; --color-hair:#3d302b; --color-shirt:#a5b7a0;
+ --color-shirt-dark:#728d6e; --color-blue:#8cacc4; --color-blue-dark:#5f819b;
+ --color-coat:#c7844b; --color-coat-dark:#a26234; --color-puffer:#77939e; --color-puffer-dark:#52717d;
+ --color-shoe:#ece9df; --color-sole:#a29d8e; --color-leaf:#c5cd9b; --color-gold:#d7a54d;
+ --color-transparent:transparent; --font-body:'Apple SD Gothic Neo','Malgun Gothic',sans-serif; --font-display:var(--font-body);
+ --radius-panel:28px; --radius-button:16px; --ease-standard:cubic-bezier(.2,.7,.3,1); --dur-short:160ms;
+}

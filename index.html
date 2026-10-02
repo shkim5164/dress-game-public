@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f4ec"><title>가을 옷장 · 옷 입히기</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2348613b' d='M27 4C7 3 2 12 6 23c12 5 22-2 21-19Z'/%3E%3C/svg%3E"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="./" aria-label="가을 옷장 처음으로"><span class="brand-mark" aria-hidden="true">⌁</span><span>가을 옷장</span></a><div class="header-actions"><button id="sound" class="icon-button" aria-label="소리 끄기" aria-pressed="true"></button><button id="settings-open" class="icon-button" aria-label="선생님 설정"></button></div></header>
+<main>
+ <div class="intro"><div><div class="eyebrow"><span class="tiny-leaf" aria-hidden="true"></span> 선선한 가을날</div><h1>소풍 갈 준비를 해요</h1></div><div class="score" aria-label="현재 점수"><span class="score-symbol" aria-hidden="true">★</span><div><span class="score-label">내 점수</span><strong><span id="score">0</span><small> / 100</small></strong></div></div></div>
+ <div class="game-grid">
+  <section class="scene-panel" aria-label="옷을 입힐 캐릭터">
+   <div class="scene-top"><span class="weather"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></svg> 가을이에요</span><button id="demo" class="quiet-button" aria-label="옷 입히는 방법 보기"></button></div>
+   <div class="character-picker" role="group" aria-label="캐릭터 선택"><button data-character="boy" aria-label="남자 캐릭터 선택" aria-pressed="true"></button><button data-character="girl" aria-label="여자 캐릭터 선택" aria-pressed="false"></button></div>
+   <div id="drop-zone" class="drop-zone" aria-label="여기에 옷을 놓아 주세요">
+    <svg class="scenery" viewBox="0 0 600 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="90" cy="110" r="42" class="sun"/><path d="M-20 470Q130 375 310 465T650 445V600H-20Z" class="hill"/><g class="tree"><path d="M513 430V170m0 138-39-45m39-12 30-41"/><path d="M515 280C434 257 431 183 466 156c-7-68 98-73 109-6 60 51 11 131-60 130Z"/></g><g class="leaves"><path d="M65 300q35-20 45 11-32 21-45-11Z"/><path d="M482 443q22-31 38-8-15 32-38 8Z"/><path d="M137 462q-6-28 25-23 7 29-25 23Z"/><path d="M438 100q-5-27 24-22 5 25-24 22Z"/></g><path d="M62 225q25-12 49 0m-32 10h47M403 359q22-12 44 0" class="wind"/></svg>
+    <div class="drop-outline" aria-hidden="true"></div><div id="avatar" class="avatar"></div><div id="demo-hand" class="demo-hand" aria-hidden="true">☝</div>
+   </div>
+   <div class="feedback" role="status" aria-live="polite"><span id="feedback-icon" class="feedback-icon" aria-hidden="true">↗</span><span id="feedback-text">옷을 끌어 입혀요</span><button id="repeat" class="icon-button" aria-label="안내 다시 듣기"></button></div>
+  </section>
+  <section class="wardrobe" aria-label="옷 고르기">
+   <div class="wardrobe-head"><span class="eyebrow">나의 옷장</span><span id="step-count" class="step-count">1 / 3</span></div>
+   <div class="tabs" role="tablist" aria-label="옷 종류"><button role="tab" data-category="top" aria-selected="true"></button><button role="tab" data-category="bottom" aria-selected="false"></button><button role="tab" data-category="outer" aria-selected="false"></button></div>
+   <div class="instruction"><h2 id="instruction">윗옷을 골라요</h2><p id="instruction-hint">캐릭터에게 끌어 주세요</p></div>
+   <div id="clothes" class="clothes"></div>
+   <div class="wardrobe-bottom"><p class="change-hint">다른 옷으로 바꿔 입어도 좋아요</p><button id="next" class="primary-button" disabled>다음 <span aria-hidden="true">→</span></button></div>
+  </section>
+ </div>
+ <footer><span class="footer-note"><span aria-hidden="true">◌</span> 천천히, 하나씩 입어 봐요</span><button id="restart" class="quiet-button">↻ <span>다시 하기</span></button></footer><p class="art-credit"><a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Designed by macrovector / Freepik</a></p>
+</main>
+<dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>선생님 설정</h2><button class="icon-button" aria-label="설정 닫기">✕</button></div><p>학생에게 맞는 방법을 골라 주세요.</p><fieldset><legend>옷 입히기</legend><label><input type="radio" name="control" value="drag" checked> 끌어서 입히기</label><label><input type="radio" name="control" value="tap"> 눌러서 입히기</label></fieldset><label class="setting-row"><span>점수 보여주기</span><input id="show-score" type="checkbox" checked></label><p class="teacher-note">선선한 가을 소풍이 기준입니다. 윗옷 ±40점, 아랫옷 ±30점, 겉옷 ±30점. 현재 입은 옷으로 계산하며, 모두 알맞게 입으면 100점입니다.</p><button class="primary-button">완료</button></form></dialog>
+<dialog id="complete"><div class="celebration-icon" aria-hidden="true">★</div><p class="eyebrow">잘했어요!</p><h2>가을 준비 끝!</h2><p>이제 소풍 갈까요?</p><div id="final-score" class="final-score">100<span>점</span></div><button id="again" class="primary-button">다시 입어 보기 <span aria-hidden="true">↻</span></button><button id="look" class="quiet-button">내 옷차림 보기</button></dialog>
+<script type="module" src="app.js"></script>
+</body></html>

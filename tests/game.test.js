@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {equip,score,isComplete} from '../game.js';
+test('all appropriate clothes score 100; mistakes can be corrected',()=>{let outfit={};assert.equal(score(outfit),0);outfit=equip(outfit,'long-shirt');outfit=equip(outfit,'pants');assert.equal(score(outfit),70);outfit=equip(outfit,'puffer');assert.equal(score(outfit),40);assert.equal(isComplete(outfit),false);outfit=equip(outfit,'jacket');assert.equal(score(outfit),100);assert.equal(isComplete(outfit),true);});
+test('repeated drops do not accumulate points and replacing preserves other slots',()=>{let outfit=equip({},'long-shirt');outfit=equip(outfit,'long-shirt');assert.equal(score(outfit),40);outfit=equip(outfit,'pants');outfit=equip(outfit,'tank');assert.equal(score(outfit),-10);assert.equal(outfit.bottom,'pants');});
+test('wrong selections have negative contributions and incomplete outfits cannot finish',()=>{let outfit={};for(const id of ['tank','shorts','puffer'])outfit=equip(outfit,id);assert.equal(score(outfit),-100);assert.equal(isComplete(outfit),false);assert.equal(isComplete({top:'long-shirt',bottom:'pants'}),false);assert.deepEqual(equip(outfit,'unknown'),outfit);});

@@ -1,0 +1,152 @@
+[
+  {
+    "file": "boy-shoes.svg",
+    "source": "42247",
+    "bounds": [
+      87,
+      389,
+      130,
+      409
+    ]
+  },
+  {
+    "file": "girl-shoes.svg",
+    "source": "42244",
+    "bounds": [
+      43,
+      391,
+      73,
+      407
+    ]
+  },
+  {
+    "file": "boy-body.svg",
+    "source": "42247",
+    "bounds": [
+      190,
+      128,
+      261,
+      399
+    ]
+  },
+  {
+    "file": "girl-body.svg",
+    "source": "42244",
+    "bounds": [
+      194,
+      142,
+      256,
+      398
+    ]
+  },
+  {
+    "file": "boy-long.svg",
+    "source": "42247",
+    "bounds": [
+      274,
+      124,
+      342,
+      213
+    ]
+  },
+  {
+    "file": "boy-tank.svg",
+    "source": "42234",
+    "bounds": [
+      225,
+      302,
+      283,
+      405
+    ]
+  },
+  {
+    "file": "boy-pants.svg",
+    "source": "42247",
+    "bounds": [
+      120,
+      252,
+      169,
+      375
+    ]
+  },
+  {
+    "file": "boy-shorts.svg",
+    "source": "42234",
+    "bounds": [
+      110,
+      362,
+      170,
+      432
+    ]
+  },
+  {
+    "file": "knit.svg",
+    "source": "42247",
+    "bounds": [
+      349,
+      155,
+      417,
+      233
+    ]
+  },
+  {
+    "file": "puffer.svg",
+    "source": "42247",
+    "bounds": [
+      274,
+      288,
+      345,
+      372
+    ]
+  },
+  {
+    "file": "girl-long.svg",
+    "source": "42244",
+    "bounds": [
+      37,
+      168,
+      94,
+      238
+    ]
+  },
+  {
+    "file": "girl-tank.svg",
+    "source": "42250",
+    "bounds": [
+      193,
+      183,
+      243,
+      255
+    ]
+  },
+  {
+    "file": "girl-pants.svg",
+    "source": "42244",
+    "bounds": [
+      116,
+      255,
+      160,
+      372
+    ]
+  },
+  {
+    "file": "girl-shorts.svg",
+    "source": "42250",
+    "bounds": [
+      253,
+      166,
+      310,
+      202
+    ]
+  },
+  {
+    "file": "girl-jacket.svg",
+    "source": "42250",
+    "bounds": [
+      166,
+      259,
+      242,
+      359
+    ]
+  }
+]
